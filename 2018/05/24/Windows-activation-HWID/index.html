@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Windows 10  数字许可证激活(HWID)方法 - Justf Tech Channel</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>About Me</span></a></li><li><a href="https://www.v2ex.com/"><span>Friends</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button" for="navi">MENU</label><img class="background" src="/pictures/post_background.jpg"><div class="post-title"><h1 class="title">Windows 10  数字许可证激活(HWID)方法</h1><ul class="meta"><li><i class="icon icon-author"></i>Justf</li><li><i class="icon icon-clock"></i>14 Minutes</li><li><i class="icon icon-calendar"></i>2018年5月24日</li></ul></div></div><div class="article-content" style="max-width:800px"><p>更新：2018-05-24 21:08</p>
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Windows 10  数字许可证激活(HWID)方法 - Justf Tech Channel</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>About Me</span></a></li><li><a href="https://www.v2ex.com/"><span>Friends</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button" for="navi">MENU</label><img class="background" src="/pictures/post_background.jpg"><div class="post-title"><h1 class="title">Windows 10  数字许可证激活(HWID)方法</h1><ul class="meta"><li><i class="icon icon-author"></i>Justf</li><li><i class="icon icon-clock"></i>14 Minutes</li><li><i class="icon icon-calendar"></i>2018年5月24日</li></ul></div></div><div class="article-content" style="max-width:800px"><p>更新：2018-05-25 20:52</p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在 Windows 10 的所有系统中，无论系统是如何被激活的（通过 Windows7/8.1 升级 或者 购买零售密钥版密钥 或者 嵌入BIOS又名MSDM许可证）都会被转换成基于各自的设备硬件 ID (HWID) 的一个数字许可证。这个证书储存在微软服务器并且每次安装系统时都会激活这台设备。只有当这台设备的硬件被更改才会导致许可证失效。通过将它绑定到一个微软账户 (MSA) 你可以在这种情况下转移证书从而激活这台(硬件被更改的)设备。</p>
 <p>这个过程在每台机器上只需要执行一次。在以后的安装中只需要跳过任何需要密钥的地方（在安装的时候选择 ‘我没有激活密钥’），之后第一次联网的时候将自动联系微软服务器注册 HWID 并激活这台设备。</p>
 <p>注意：如果从 VLSC 或者 MVS Business ISO 中安装了批量许可证版本（VL版），需要输入默认的零售/OEM 密钥 才能重新获得激活。</p>
@@ -63,6 +63,7 @@
 <p>完成。恭喜。</p>
 <h3 id="自动模式"><a href="#自动模式" class="headerlink" title="自动模式"></a>自动模式</h3><p><strong>请不要使用任何代理</strong></p>
 <p>注意：这个工具需要一些时间（取决于你的设备性能）执行系统检查，莫方，稍等即可。谢谢。</p>
+<p><strong>v10.08</strong> 添加了密钥安装模式（下拉菜单中），对于使用 VL ISO 重装，已经有 HWID 和不需要整个激活过程的设备快速切换到 零售/OEM 版本 ，工具将会把此密钥显示在系统信息中如果这个密钥没有被安装的话。</p>
 <p><strong>v10.01</strong> 稍微改变了在 Win 7 兼容模式下运行 GatherOsState.exe 的过程，所以创建票据的过程将会把系统信息设置为 Windows 7，这将会更好地模仿从一个 Win 7 系统获得原始票据。优化了 界面</p>
 <p><strong>v9.32</strong> 添加了 nsane 和 aiowares 论坛的链接以获取信息和支持</p>
 <p><strong>v9.25</strong> 在没有用户干预的情况下将更改初始信息界面改为启动屏幕（注：我并没有使用此工具也不知道是什么意思）</p>
@@ -78,7 +79,7 @@
 <p> 使用静默模式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hwidgen.mk3 silent</span><br></pre></td></tr></table></figure>
 <p> 下载地址（本人做了搬运并且将持续更新）</p>
-<p><a href="https://drive.google.com/open?id=14swGfWlpXVcfE9U_mu8InPbAqtf78KzO" target="_blank" rel="noopener">Google Drive (包含历史版本)</a> </p>
+<p><a href="https://drive.google.com/open?id=14swGfWlpXVcfE9U_mu8InPbAqtf78KzO" target="_blank" rel="noopener">Google Drive (包含历史版本</a>)</p>
 <p>解压密码</p>
 <p>3Fs44Rv#tZ4u3UOij656NgF____</p>
 <p>各种哈希值</p>
