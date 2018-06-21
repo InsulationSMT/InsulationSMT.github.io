@@ -10,7 +10,15 @@ script:
   - chmod +x ./deploy.sh
   - hexo clean
   - hexo g
-  - ./deploy.sh > /dev/null
+  
+after_script:
+  - cd ./public
+  - git init
+  - git config --global user.email "${GitHubEMail}"
+  - git config --global user.name "${GitHubUser}"
+  - git add --all .
+  - git commit -m "Auto Builder of ${GitHubUser}'s Blog"
+  - git push --quiet --force https://${GitHubKEY}@github.com/${GitHubUser}/${GitHubRepo}.git master
 branches:
   only:
     - raw
