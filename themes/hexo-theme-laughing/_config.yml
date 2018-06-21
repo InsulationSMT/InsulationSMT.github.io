@@ -1,0 +1,41 @@
+# Icon
+favicon: /favicon.ico
+# SEO
+keywords: Hexo, Gruntjs, Nodejs, Reactjs, Vuejs
+# Header
+page_background: /pictures/page_background.jpg
+page_menu_button: dark
+post_background: /pictures/post_background.jpg
+post_menu_button: dark
+title_plancehold: 随笔
+author:
+  head: /pictures/ProfilePhoto.png
+  signature: Justf 的折腾频道。随笔频道暂时咕咕咕~
+navication:
+  - name: About Me
+    link: https://github.com
+  - name: Friends
+    link: https://www.v2ex.com/
+# content
+content_width: 800
+# Footer
+## Social icon list: [facebook, twitter, weibo, wechat, github, stackoverflow, linkin, email, segmentfault, flickr, zhihu, disqus, douban, bilibili]
+social:
+  - name: Github
+    icon: github
+    link: https://github.com/BoizZ
+  - name: Weibo
+    icon: weibo
+    link: https://weibo.com/heqibang
+  - name: SegmentFault
+    icon: segmentfault
+    link: https://www.segmentfault.com/u/bon
+# Duoshuo
+duoshuo:
+  enable: false
+  siteName: ueibo
+# Copyright
+copyright:
+  record: false
+  hexo: true
+  laughing: true
