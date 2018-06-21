@@ -7,7 +7,7 @@ install:
   - npm install
   - npm install hexo-renderer-pug --save
 
-  script:
+script:
   - hexo clean
   - hexo g
   
