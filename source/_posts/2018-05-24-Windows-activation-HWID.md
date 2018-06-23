@@ -1,15 +1,15 @@
 ---
 title: Windows 10  数字许可证激活(HWID)方法
-date: 2018-05-24 20:12:15
+date: 2018-05-24 20:52:15
 tags:
 - Windows
 ---
 
-更新：2018-05-24 21:08
+更新：2018-06-17 19:55
 
 ### 前言
 
-在 Windows 10 的所有系统中，无论系统是如何被激活的（通过 Windows7/8.1 升级 或者 购买零售密钥版密钥 或者 嵌入BIOS又名MSDM许可证）都会被转换成基于各自的设备硬件 ID (HWID) 的一个数字许可证。这个证书储存在微软服务器并且每次安装系统时都会激活这台设备。只有当这台设备的硬件被更改才会导致许可证失效。通过将它绑定到一个微软账户 (MSA) 你可以在这种情况下转移证书从而激活这台(硬件被更改的)设备。
+在 Windows 10 的所有系统中，无论系统是如何被激活的（通过 Windows7/8.1 升级 或者 购买零售密钥版密钥 或者 嵌入BIOS又名MSDN许可证）都会被转换成基于各自的设备硬件 ID (HWID) 的一个数字许可证。这个证书储存在微软服务器并且每次安装系统时都会激活这台设备。只有当这台设备的硬件被更改才会导致许可证失效。通过将它绑定到一个微软账户 (MSA) 你可以在这种情况下转移证书从而激活这台(硬件被更改的)设备。
 
 这个过程在每台机器上只需要执行一次。在以后的安装中只需要跳过任何需要密钥的地方（在安装的时候选择 ‘我没有激活密钥’），之后第一次联网的时候将自动联系微软服务器注册 HWID 并激活这台设备。
 
@@ -183,6 +183,16 @@ tags:
 
 注意：这个工具需要一些时间（取决于你的设备性能）执行系统检查，莫方，稍等即可。谢谢。
 
+**v10.24** 修复删除错误的注册表的问题（感谢 angelkyo 的提醒）
+
+**v10.21** 更正了 Win7  的 compat 条目（感谢 alert 的资源）[ 译者注：compat 怀疑是作者笔误？]
+
+**v10.18** 修复了 破解 LTSB 2016 的过程
+
+**v10.15** 增加了 Enterprise LTSB 2015 （N）的支持  （仅在非 N 的版本上进行了测试）（感谢 hwidmod 提供所需的 gatherosstate.exe） 
+
+**v10.08** 添加了密钥安装模式（下拉菜单中），对于使用 VL ISO 重装，已经有 HWID 和不需要整个激活过程的设备快速切换到 零售/OEM 版本 ，工具将会把此密钥显示在系统信息中如果这个密钥没有被安装的话。
+
 **v10.01** 稍微改变了在 Win 7 兼容模式下运行 GatherOsState.exe 的过程，所以创建票据的过程将会把系统信息设置为 Windows 7，这将会更好地模仿从一个 Win 7 系统获得原始票据。优化了 界面
 
 **v9.32** 添加了 nsane 和 aiowares 论坛的链接以获取信息和支持
@@ -215,7 +225,7 @@ hwidgen.mk3 silent
 
  下载地址（本人做了搬运并且将持续更新）
 
-[Google Drive (包含历史版本)](https://drive.google.com/open?id=14swGfWlpXVcfE9U_mu8InPbAqtf78KzO) 
+[Google Drive (包含历史版本](https://drive.google.com/open?id=14swGfWlpXVcfE9U_mu8InPbAqtf78KzO))
 
 解压密码
 
@@ -224,15 +234,15 @@ hwidgen.mk3 silent
 各种哈希值
 
 ```
-BLAKE2sp: d4091d1a9cce5636bc99cfbee6bc6997e613449de620d66e70b221bf81ab4973
-CRC64: 4670e3e5936015fa
-MD5: 9b113cdf0f1209e63bdfbdcac175ad00
-SHA-1: 04b812a9671f7e4fab3b0c128bf39d08b2ada3bd
-SHA-256: fa8475fe3f14760d1bedcf6a2a0720fe3b702a23f3c95b989a777e8bbda80583
-SHA-384: 951c8679cbddc001eac97ad893a474624b12f887ca254f1fac571b31d85129440e6454411df56b1186abf8e8e6abbec3
-SHA-512: 86218362f2231c24565a92b508f3a8007560d6065334acbb0810b60580ed8a2156d82102b5d212d8782a2d3870e2e2cf963f7f3f2cf733358a27d6581e103b2e
-SHA3-224: af5d846fb1ab569108e2e3bf65d870b87ccdc475cc9deae3a76275d7
-SHA3-256: 69e604c727ca502dda94c728ce69194ec77167adbd748609a8c94fc964cf1731
+BLAKE2sp: 5b07279fcb5601b43b62d1bdf686dd9ec822afe022e9791556d3760fd00eabfa
+CRC64: 04854a5bf82ea9f3
+MD5: e18c5191ff5e28516292e2c1a2db042c
+SHA-1: 5c0f50125c9651e1acb3468e7460381ef3aa7917
+SHA-256: 4d7b8701a8de74b6192d6946d8040ea79546314bc2b12babbc873d89e6a16ec0
+SHA-384: ebcf946c126ad8b09114a330171ce94771bf2cbfb37d9ea556ee111a21b9cd3cdbf761d89311ddf275279a1cf4ff0711
+SHA-512: 376eedb48ef201ced43d5e54aa10912597480e50e50e5c38e60e53460f9a760a10914e8016b409e62a2b2430e6ac8c8d1bd8037888cbbc9c5ac3a1839e612e0e
+SHA3-224: ae3775dda001aae20820a1402803ba8ddd9e5d9a11a3a423e211ca7b
+SHA3-256: e8bf788eb2dc4f67b26d5ad3d17e04a9d66ba308711d33d4886d49973b4bec67
 ```
 
 [病毒检测报告](https://www.virustotal.com/de/file/d6117778cd38325cc1572f625a276e286f91f6eff98724456060bcbacf4f8c1f/analysis/1526509270/)
