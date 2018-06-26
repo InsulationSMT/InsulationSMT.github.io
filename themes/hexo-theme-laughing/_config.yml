@@ -23,13 +23,7 @@ content_width: 800
 social:
   - name: Github
     icon: github
-    link: https://github.com/BoizZ
-  - name: Weibo
-    icon: weibo
-    link: https://weibo.com/heqibang
-  - name: SegmentFault
-    icon: segmentfault
-    link: https://www.segmentfault.com/u/bon
+    link: https://github.com/InsulateJustf
 # Duoshuo
 duoshuo:
   enable: false
